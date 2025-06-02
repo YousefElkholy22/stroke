@@ -1,0 +1,2 @@
+D:/projectes/stroke/android/app/.cxx/Debug/l6m4z592/arm64-v8a/CMakeFiles/edit_cache.dir
+D:/projectes/stroke/android/app/.cxx/Debug/l6m4z592/arm64-v8a/CMakeFiles/rebuild_cache.dir
