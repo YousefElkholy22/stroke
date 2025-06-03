@@ -1,15 +1,5 @@
 import 'package:mohammed_ashraf/core/enums/user_type.dart';
 
-UserType _userTypeFromString(String value) {
-  switch (value.toUpperCase()) {
-    case 'DOCTOR':
-      return UserType.doctor;
-    case 'PATIENT':
-    default:
-      return UserType.patient;
-  }
-}
-
 class UserResponse {
   final String status;
   final UserData data;
@@ -95,7 +85,7 @@ class UserData {
     // 1. Parse the discriminator "__t" (called "t" here) and role
     final String rawT = (json['__t'] as String?) ?? '';
     final String rawRole = (json['role'] as String? ?? rawT).toString();
-    final userType = _userTypeFromString(rawRole);
+    final userType = UserType.fromStringKey(rawRole);
 
     // 2. Common fields
     final id = json['_id'] as String;
