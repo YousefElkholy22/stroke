@@ -23,6 +23,8 @@ abstract class AuthRepo {
 }
 
 abstract class RegisterParams {
+  UserType get userType;
+
   Map<String, dynamic> toJson();
 }
 
@@ -48,6 +50,9 @@ class RegisterPatientParams implements RegisterParams {
     required this.country,
     required this.address,
   });
+
+  @override
+  final UserType userType = UserType.patient;
 
   @override
   Map<String, dynamic> toJson() {
@@ -133,4 +138,17 @@ class RegisterDoctorParams implements RegisterParams {
       'workingDays': workingDays.map((wd) => wd.toJson()).toList(),
     };
   }
+
+  @override
+  UserType get userType => UserType.doctor;
+}
+
+class LoginParams {
+  final String email;
+  final String password;
+
+  LoginParams({
+    required this.email,
+    required this.password,
+  });
 }
