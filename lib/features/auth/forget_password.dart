@@ -24,10 +24,12 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
       appBar: AppBar(
         // title: const Text('Forget Password'), // <--- تم حذف العنوان من هنا
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.black), // جعل أيقونة الرجوع سوداء
+          icon: const Icon(Icons.arrow_back,
+              color: Colors.black), // جعل أيقونة الرجوع سوداء
           onPressed: () => Navigator.of(context).pop(),
         ),
-        backgroundColor: Colors.white, // جعل خلفية AppBar بيضاء لتتناسب مع محتوى الصفحة
+        backgroundColor:
+            Colors.white, // جعل خلفية AppBar بيضاء لتتناسب مع محتوى الصفحة
         elevation: 0, // إزالة الظل تحت AppBar
       ),
       backgroundColor: Colors.white, // تحديد لون خلفية الصفحة
@@ -70,8 +72,10 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(8.0),
                       ),
-                      focusedBorder: OutlineInputBorder( // لتمييز الحقل عند التركيز
-                        borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 2),
+                      focusedBorder: OutlineInputBorder(
+                        // لتمييز الحقل عند التركيز
+                        borderSide: BorderSide(
+                            color: Theme.of(context).primaryColor, width: 2),
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                     ),
@@ -91,7 +95,7 @@ class _ForgetPasswordScreenState extends State<ForgetPasswordScreen> {
                     width: double.infinity,
                     child: ElevatedButton(
                       onPressed: () {
-if (_formKey.currentState!.validate()) {
+                        if (_formKey.currentState!.validate()) {
                           // إذا أردت تمرير الإيميل، تأكد أن VerificationCodeScreen تقبله
                           // Navigator.pushReplacement(
                           //   context,
@@ -109,7 +113,8 @@ if (_formKey.currentState!.validate()) {
                         }
                       },
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color.fromRGBO(27, 132, 153, 0.89),
+                        backgroundColor:
+                            const Color.fromRGBO(27, 132, 153, 0.89),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8.0),
                         ),

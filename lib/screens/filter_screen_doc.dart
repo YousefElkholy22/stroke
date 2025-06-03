@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mohammed_ashraf/constants/app_colors.dart';
+import 'package:mohammed_ashraf/core/constants/app_colors.dart';
 import 'package:mohammed_ashraf/widgets/filter_button.dart';
 
 class FilterScreenDoctor extends StatefulWidget {

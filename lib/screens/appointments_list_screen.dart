@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mohammed_ashraf/constants/app_colors.dart';
+import 'package:mohammed_ashraf/core/constants/app_colors.dart';
 import 'package:mohammed_ashraf/screens/filter_screen_doc.dart';
 import 'package:mohammed_ashraf/screens/search_screen_doc.dart';
 import 'package:mohammed_ashraf/widgets/patient_card.dart';
-import 'package:mohammed_ashraf/screens/search_screen.dart';
-import 'package:mohammed_ashraf/screens/filter_screen.dart';
 import 'package:mohammed_ashraf/screens/appointment_detail_screen.dart';
 
 class AppointmentsListScreen extends StatelessWidget {

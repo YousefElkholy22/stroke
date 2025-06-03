@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:mohammed_ashraf/constants/app_colors.dart';
-import 'package:mohammed_ashraf/screens/doctor_notification_exists.dart';
-import 'package:mohammed_ashraf/screens/doctor_search.dart';
+import 'package:mohammed_ashraf/core/constants/app_colors.dart';
 import 'package:mohammed_ashraf/screens/filter_screen_doc.dart';
 import 'package:mohammed_ashraf/screens/notifications_screen_Doc.dart';
 import 'package:mohammed_ashraf/screens/search_screen_doc.dart';
 import 'package:mohammed_ashraf/widgets/patient_card.dart';
-
 
 class HomeDoctor extends StatelessWidget {
   const HomeDoctor({super.key});
@@ -31,15 +28,21 @@ class HomeDoctor extends StatelessWidget {
                   const SizedBox(width: 12),
                   const Text(
                     'Dr. Ahmed',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: AppColors.textColor),
+                    style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: AppColors.textColor),
                   ),
                   const Spacer(),
                   IconButton(
-                    icon: const Icon(Icons.notifications_none_outlined, size: 28, color: AppColors.textColor),
+                    icon: const Icon(Icons.notifications_none_outlined,
+                        size: 28, color: AppColors.textColor),
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => const NotificationsScreendoctor()),
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                const NotificationsScreendoctor()),
                       );
                     },
                   ),
@@ -57,7 +60,9 @@ class HomeDoctor extends StatelessWidget {
                         onTap: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => const SearchScreenDoctor()),
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const SearchScreenDoctor()),
                           );
                         },
                         child: AbsorbPointer(
@@ -76,9 +81,11 @@ class HomeDoctor extends StatelessWidget {
                               ),
                               focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(12.0),
-                                borderSide: const BorderSide(color: AppColors.primaryColor, width: 1.5),
+                                borderSide: const BorderSide(
+                                    color: AppColors.primaryColor, width: 1.5),
                               ),
-                              contentPadding: const EdgeInsets.symmetric(vertical: 15.0, horizontal: 15.0),
+                              contentPadding: const EdgeInsets.symmetric(
+                                  vertical: 15.0, horizontal: 15.0),
                             ),
                           ),
                         ),
@@ -89,7 +96,8 @@ class HomeDoctor extends StatelessWidget {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) =>FilterScreenDoctor()),
+                          MaterialPageRoute(
+                              builder: (context) => FilterScreenDoctor()),
                         );
                       },
                       borderRadius: BorderRadius.circular(12.0),
@@ -99,7 +107,8 @@ class HomeDoctor extends StatelessWidget {
                           color: Colors.grey[100],
                           borderRadius: BorderRadius.circular(12.0),
                         ),
-                        child: const Icon(Icons.filter_list, color: AppColors.textColor),
+                        child: const Icon(Icons.filter_list,
+                            color: AppColors.textColor),
                       ),
                     )
                   ],
@@ -130,15 +139,19 @@ class HomeDoctor extends StatelessWidget {
                           ),
                           const SizedBox(height: 10),
                           Row(
-                            children: List.generate(4, (index) => Container(
-                              margin: const EdgeInsets.only(right: 4),
-                              width: 8,
-                              height: 8,
-                              decoration: BoxDecoration(
-                                color: index == 0 ? Colors.white : Colors.white.withOpacity(0.5),
-                                shape: BoxShape.circle,
-                              ),
-                            )),
+                            children: List.generate(
+                                4,
+                                (index) => Container(
+                                      margin: const EdgeInsets.only(right: 4),
+                                      width: 8,
+                                      height: 8,
+                                      decoration: BoxDecoration(
+                                        color: index == 0
+                                            ? Colors.white
+                                            : Colors.white.withOpacity(0.5),
+                                        shape: BoxShape.circle,
+                                      ),
+                                    )),
                           )
                         ],
                       ),
@@ -149,7 +162,9 @@ class HomeDoctor extends StatelessWidget {
                       child: Image.asset(
                         'assets/images/banner2.png',
                         height: 100,
-                        errorBuilder: (context, error, stackTrace) => const Icon(Icons.image, size: 50, color: Colors.white54),
+                        errorBuilder: (context, error, stackTrace) =>
+                            const Icon(Icons.image,
+                                size: 50, color: Colors.white54),
                       ),
                     ),
                   ],
@@ -163,18 +178,18 @@ class HomeDoctor extends StatelessWidget {
                 children: [
                   const Text(
                     'Find Patients',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: AppColors.textColor),
+                    style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: AppColors.textColor),
                   ),
                   TextButton(
                     onPressed: () {
                       final tabController = DefaultTabController.of(context);
-                      if (tabController != null) {
-                        tabController.animateTo(1);
-                      } else {
-                        print("TabController not found in HomeScreen. Cannot switch tab for 'See all'.");
-                      }
+                      tabController.animateTo(1);
                     },
-                    child: const Text('See all', style: TextStyle(color: AppColors.primaryColor)),
+                    child: const Text('See all',
+                        style: TextStyle(color: AppColors.primaryColor)),
                   ),
                 ],
               ),
@@ -185,8 +200,7 @@ class HomeDoctor extends StatelessWidget {
                 name: 'Mohamed Ahmed',
                 status: 'Patient',
                 time: '10:30am - 11:00am',
-                onViewDetails: () {
-                },
+                onViewDetails: () {},
               ),
               const SizedBox(height: 10),
               PatientCard(
@@ -194,8 +208,7 @@ class HomeDoctor extends StatelessWidget {
                 name: 'Omar Ali',
                 status: 'Patient',
                 time: '12:00pm - 12:30pm',
-                onViewDetails: () {
-                },
+                onViewDetails: () {},
               ),
             ],
           ),
