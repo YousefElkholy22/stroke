@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:country_picker/country_picker.dart';
-import 'package:mohammed_ashraf/features/auth/login.dart';
+import 'package:mohammed_ashraf/features/auth/presentation/pages/login_screen.dart';
 
 class RegistreScreenSecond extends StatefulWidget {
   const RegistreScreenSecond({super.key});

@@ -14,9 +14,9 @@ class ApiBaseHelper {
     dioInit();
   }
 
-  // ================== Initialize DIO ======================
   void dioInit() {
-    dio.options.baseUrl = "localhost:4000";
+    dio.options.baseUrl = "http://192.168.1.7:4000/api/v1/";
+      dio.options.headers = {"Content-Type": "application/json"};
     dio.options.sendTimeout = const Duration(milliseconds: 30000);
     dio.options.connectTimeout = const Duration(milliseconds: 30000);
     dio.options.receiveTimeout = const Duration(milliseconds: 30000);
@@ -41,7 +41,6 @@ class ApiBaseHelper {
   // ================== GET Method ======================
   Future<dynamic> get({
     required String url,
-    String? token,
     Map<String, dynamic>? body,
     Map<String, dynamic>? queryParameters,
   }) async {
@@ -72,8 +71,7 @@ class ApiBaseHelper {
   Future<dynamic> post({
     required String url,
     required Map<String, dynamic> body,
-    String? token,
-    DataFormat dataFormat = DataFormat.formData,
+    DataFormat dataFormat = DataFormat.rawData,
     Map<String, dynamic>? queryParameters,
   }) async {
     try {

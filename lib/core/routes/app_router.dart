@@ -3,12 +3,12 @@ import 'package:mohammed_ashraf/core/routes/routes.dart';
 
 import '../../features/auth/add_photo.dart';
 import '../../features/auth/forget_password.dart';
-import '../../features/auth/login.dart';
+import '../../features/auth/presentation/pages/login_screen.dart';
 import '../../features/auth/phone_number_verified.dart';
 import '../../features/auth/register1.dart';
 import '../../features/auth/register2.dart';
 import '../../features/auth/reset_password.dart';
-import '../../features/auth/select_your_role.dart';
+import '../../features/auth/presentation/pages/select_role_screen.dart';
 import '../../features/auth/verify_email.dart';
 import '../../features/lets_get_started.dart';
 import '../../features/onboarding/on_boardinng_view.dart';
@@ -59,7 +59,7 @@ final GoRouter router = GoRouter(
     ),
     GoRoute(
       path: Routes.roleSelection,
-      builder: (context, state) => RoleSelectionScreen(),
+      builder: (context, state) => SelectRoleScreen(),
     ),
     GoRoute(
       path: Routes.verificationCode,

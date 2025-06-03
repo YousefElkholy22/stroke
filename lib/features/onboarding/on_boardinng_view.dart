@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mohammed_ashraf/features/auth/select_your_role.dart';
+import 'package:mohammed_ashraf/features/auth/presentation/pages/select_role_screen.dart';
 import 'package:mohammed_ashraf/features/onboarding/on_boarding2_view.dart';
 
 class OnboardingView extends StatelessWidget {
@@ -73,12 +73,13 @@ class OnboardingView extends StatelessWidget {
               const SizedBox(height: 10),
               ElevatedButton(
                 onPressed: () {
-                   Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-          builder: (context) => RoleSelectionScreen(), // Replace with your next screen
-        ),
-      );
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          SelectRoleScreen(), // Replace with your next screen
+                    ),
+                  );
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.white,

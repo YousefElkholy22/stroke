@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mohammed_ashraf/features/auth/select_your_role.dart';
+import 'package:mohammed_ashraf/features/auth/presentation/pages/select_role_screen.dart';
 
 class OnboardingViewSecond extends StatelessWidget {
   const OnboardingViewSecond({super.key});
@@ -43,14 +43,15 @@ class OnboardingViewSecond extends StatelessWidget {
               ElevatedButton(
                 onPressed: () {
                   Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-          builder: (context) => RoleSelectionScreen(), // Replace with your next screen
-        ),
-      );
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          SelectRoleScreen(), // Replace with your next screen
+                    ),
+                  );
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor:  const Color.fromRGBO(27, 132, 153, 0.89),
+                  backgroundColor: const Color.fromRGBO(27, 132, 153, 0.89),
                   minimumSize: const Size(double.infinity, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
@@ -64,12 +65,13 @@ class OnboardingViewSecond extends StatelessWidget {
               const SizedBox(height: 10),
               ElevatedButton(
                 onPressed: () {
-                   Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-          builder: (context) => RoleSelectionScreen(), // Replace with your next screen
-        ),
-      );
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          SelectRoleScreen(), // Replace with your next screen
+                    ),
+                  );
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.white,

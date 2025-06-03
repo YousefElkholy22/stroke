@@ -3,14 +3,14 @@ import 'package:mohammed_ashraf/features/lets_get_started.dart';
 import 'package:mohammed_ashraf/features/auth/role_provider.dart';
 import 'package:provider/provider.dart';
 
-class RoleSelectionScreen extends StatefulWidget {
-  const RoleSelectionScreen({super.key});
+class SelectRoleScreen extends StatefulWidget {
+  const SelectRoleScreen({super.key});
 
   @override
-  _RoleSelectionScreenState createState() => _RoleSelectionScreenState();
+  SelectRoleScreenState createState() => SelectRoleScreenState();
 }
 
-class _RoleSelectionScreenState extends State<RoleSelectionScreen> {
+class SelectRoleScreenState extends State<SelectRoleScreen> {
   String? _selectedRole;
 
   @override

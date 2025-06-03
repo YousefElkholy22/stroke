@@ -3,7 +3,7 @@ import 'package:mohammed_ashraf/settings/edit_profile.dart';
 import 'package:mohammed_ashraf/settings/notifications.dart';
 import 'package:mohammed_ashraf/settings/privacy.dart';
 import 'package:mohammed_ashraf/settings/settings.dart';
-import 'package:mohammed_ashraf/features/auth/login.dart';
+import 'package:mohammed_ashraf/features/auth/presentation/pages/login_screen.dart';
 import 'package:mohammed_ashraf/screens/main_screen.dart'; // تأكد من استيراد شاشة الصفحة الرئيسية
 
 class ProfileScreen extends StatelessWidget {
